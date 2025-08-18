@@ -38,6 +38,9 @@ micromamba activate all-gpu-free
 # Install tbai_ros
 just fresh-install-all-gpu-free
 
+##########################
+## some helpful command ##
+##########################
 # reinstall
 just build
 
@@ -57,7 +60,10 @@ source $(catkin locate)/devel/setup.bash && roslaunch tbai_ros_np3o simple_go2.l
 # Try out other examples located under tbai_ros_mpc, tbai_ros_bob, tbai_ros_dtc, tbai_ros_joe and tbai_ros_np3o
 # MPC is unstable
 # Run JOE example
-source $(catkin locate)/devel/setup.bash && roslaunch tbai_ros_joe simple.launch gui:=true
+source $(catkin locate)/devel/setup.bash && dbus-run-session roslaunch tbai_ros_joe simple.launch gui:=true
+
+# Run DTC example
+source $(catkin locate)/devel/setup.bash && dbus-run-session roslaunch tbai_ros_dtc simple.launch gui:=true
 ```
 
 ### Go2 deployment
