@@ -37,6 +37,12 @@ micromamba activate all-gpu-free
 
 # Install tbai_ros
 just fresh-install-all-gpu-free
+
+# reinstall
+just build
+
+# help
+just help
 ```
 
 Once the installation is complete, you can run one of our many examples, for instance:
@@ -49,6 +55,9 @@ micromamba activate all-gpu-free
 source $(catkin locate)/devel/setup.bash && roslaunch tbai_ros_np3o simple_go2.launch gui:=true
 
 # Try out other examples located under tbai_ros_mpc, tbai_ros_bob, tbai_ros_dtc, tbai_ros_joe and tbai_ros_np3o
+# MPC is unstable
+# Run JOE example
+source $(catkin locate)/devel/setup.bash && roslaunch tbai_ros_joe simple.launch gui:=true
 ```
 
 ### Go2 deployment
@@ -150,3 +159,11 @@ Here are a couple that most inspiration was drawn from and that were instrumenta
 - hundreds of others ...
 
 Thank you all 🤗
+
+
+---
+### bug记录
+- gazebo一直卡在打开界面
+https://blog.csdn.net/m0_73694897/article/details/132489400
+- 模型路径在huggingface, 缓存路径在`/tmp/tbai_hf_cache/`
+https://huggingface.co/kubjonai/tbai-models/tree/main
