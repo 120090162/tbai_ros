@@ -29,7 +29,7 @@ To install `tbai_ros`, we recommend using `micromamba`, though `tbai_ros` is a f
 
 # Clone tbai_ros
 mkdir -p ros/src && cd ros/src
-git clone git@github.com:lnotspotl/tbai_ros.git --recursive && cd tbai_ros
+git clone https://github.com/120090162/tbai_ros.git --recursive && cd tbai_ros
 
 # Create conda environment
 micromamba env create -f .conda/all-gpu-free.yaml
